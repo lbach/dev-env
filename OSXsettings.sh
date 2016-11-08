@@ -21,7 +21,7 @@ defaults write com.apple.Dock autohide -bool TRUE;
 killall Dock
 
 # Enable AirDrop over Ethernet and on unsupported Macs running Lion
-defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
+#defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 
 # Set a blazingly fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 1
@@ -39,4 +39,4 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 chflags nohidden ~/Library
 
 # No desktop, I just put garbage there...
-defaults write com.apple.finder CreateDesktop -bool FALSE;killall Finder
+# defaults write com.apple.finder CreateDesktop -bool FALSE;killall Finder

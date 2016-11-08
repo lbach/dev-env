@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -ex
 
 # Inspiration:
 # - http://fredkelly.net/articles/2014/10/19/developing_on_yosemite.html
@@ -18,14 +18,7 @@ then
   brew install caskroom/cask/brew-cask
 fi
 
-# Install latest zsh and oh-my-zsh
-OMZ=~/.oh-my-zsh
-if test ! -d $OMZ
-then
-  echo "> Installing oh my zsh..."
-  brew install zsh
-  curl -L http://install.ohmyz.sh | sh
-fi
+brew install fish
 
 # Install common sanity
 echo "> Installing common sanity..."
@@ -45,32 +38,21 @@ brew install git
 brew install mercurial
 brew install tree
 brew install pstree
-brew install the_silver_searcher
+#brew install the_silver_searcher
 brew install jq
 
 # Install python packages
 pip install requests virtualenv pep8 pylint flake8
 
-# Symlink dot files
-ln -fs $PWD/home/.zshrc ~
-cp home/.gitconfig ~  # e-mail not in git
-
-# And oh my zsh theme
-mkdir -p ~/.oh-my-zsh/themes/
-ln -fs $PWD/skovhus.zsh-theme ~/.oh-my-zsh/themes/skovhus.zsh-theme
-
 # Install Apps
 echo "> Installing Apps you will like..."
+brew cask install iterm2
 brew cask install google-chrome
 brew cask install atom
 brew cask install sublime-text
 brew cask install gitup
 brew cask install shiftit
-brew cask install dropbox
-brew cask install flux
-brew cask install jumpcut
 brew cask install licecap
-brew cask install omnigraffle
 brew cask install spotify
 brew cask install docker
 
