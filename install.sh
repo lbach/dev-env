@@ -40,6 +40,7 @@ brew install tree
 brew install pstree
 #brew install the_silver_searcher
 brew install jq
+brew install mg
 
 # Install python packages
 pip install requests virtualenv pep8 pylint flake8
@@ -50,6 +51,7 @@ brew cask install iterm2
 brew cask install google-chrome
 brew cask install atom
 brew cask install sublime-text
+brew cask install pycharm
 brew cask install gitup
 brew cask install shiftit
 brew cask install licecap
@@ -65,6 +67,13 @@ cp .atom/config.cson ~/.atom/
 echo "> Setting up Sublime"
 mkdir -p ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
 cp Sublime/User/* ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
+
+# ipython
+echo "> Setting up Sublime"
+mkdir -p ~/.ipython/profile_default/
+ln -s $(pwd)/configurations/.ipython/profile_default/ipython_config.py \
+    ~/.ipython/profile_default/ipython_config.py
+
 
 echo "> Done!"
 
