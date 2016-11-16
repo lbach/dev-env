@@ -47,12 +47,12 @@ pip install requests virtualenv pep8 pylint flake8
 
 # Install Apps
 echo "> Installing Apps you will like..."
+pip install git-up # https://github.com/msiemens/PyGitUp
 brew cask install iterm2
 brew cask install google-chrome
 brew cask install atom
 brew cask install sublime-text
 brew cask install pycharm
-brew cask install gitup
 brew cask install shiftit
 brew cask install licecap
 brew cask install spotify
