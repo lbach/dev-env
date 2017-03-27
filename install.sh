@@ -64,7 +64,7 @@ cp .atom/config.cson ~/.atom/
 
 echo "> Setting up fish..."
 mkdir -p ~/.config/fish/functions
-cp -r configurations/fishshell/*  ~/.config/fish/
+cp -r home/dotconfig/.fish  ~/.config/fish/
 
 # Sublime
 #echo "> Setting up Sublime"
