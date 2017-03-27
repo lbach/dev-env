@@ -1,12 +1,11 @@
-[alias]
-    push = push -u
+# This is Git's per-user configuration file.
 [user]
-    name = skovhus
-    email =
+# Please adapt and uncomment the following lines:
+	name = Lasse Bach
+	email = <fill in>
 [push]
-    default = current
-    followTags = true
-[core]
-    editor = nano
+	default = current
 [git-up "fetch"]
-    prune = true
+	prune = true
+[http "https://gopkg.in"]
+	followRedirects = true
