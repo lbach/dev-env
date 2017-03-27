@@ -62,6 +62,10 @@ echo "> Setting up Atom..."
 apm install `cat atom-packages.list`
 cp .atom/config.cson ~/.atom/
 
+echo "> Setting up fish..."
+mkdir -p ~/.config/fish/functions
+cp -r configurations/fishshell/*  ~/.config/fish/
+
 # Sublime
 #echo "> Setting up Sublime"
 #mkdir -p ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
