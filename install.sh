@@ -64,7 +64,8 @@ cp .atom/config.cson ~/.atom/
 
 echo "> Setting up fish..."
 mkdir -p ~/.config/fish/functions
-cp -r home/dotconfig/.fish  ~/.config/fish/
+cp -r home/dotconfig/fish  ~/.config/fish/
+grep -q fish /etc/shells && sudo sh -c "echo '/usr/local/bin/fish' >> /etc/shells"
 
 # Sublime
 #echo "> Setting up Sublime"
@@ -89,3 +90,4 @@ echo "- Fix all issues from running brew doctor"
 echo "- Set up short cuts http://apple.stackexchange.com/questions/167967/creating-system-wide-keyboard-shortcut-to-launch-applications"
 echo "- Configure shiftit, jumpcut to start, etc..."
 echo "- Open Sublime and install Package Control"
+echo "change shell to fish"

@@ -1,10 +1,7 @@
 set -x EDITOR mg
-set -x GOPATH /Users/lasseb/repo/cloudmonitor
-set PATH ~/bin $GOPATH/bin $PATH
-set -x JAVA_HOME (/usr/libexec/java_home -v 1.8)
-
 
 abbr -a gu git-up
+abbr -a gup 'git-up; and git push'
 abbr -a gp git push
 abbr -a gs git status
 abbr -a gd git diff

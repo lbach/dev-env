@@ -18,6 +18,9 @@ defaults write com.apple.dock show-process-indicators -bool true
 # Hide the Dock
 defaults write com.apple.Dock autohide -bool TRUE;
 
+# Remove all shortcuts in the Dock
+defaults write com.apple.dock persistent-apps -array
+
 killall Dock
 
 # Enable AirDrop over Ethernet and on unsupported Macs running Lion
