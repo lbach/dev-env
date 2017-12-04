@@ -41,9 +41,10 @@ brew install pstree
 #brew install the_silver_searcher
 brew install jq
 brew install mg
+brew install pipenv
 
 # Install python packages
-pip install requests virtualenv pep8 pylint flake8
+#pip install requests virtualenv pep8 pylint flake8
 
 # Install Apps
 echo "> Installing Apps you will like..."
