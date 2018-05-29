@@ -15,14 +15,13 @@ then
   echo "> Installing brew..."
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   brew doctor
-  brew install caskroom/cask/brew-cask
 fi
 
 brew install fish
 
 # Install common sanity
 echo "> Installing common sanity..."
-brew tap homebrew/dupes
+brew tap caskroom/cask
 brew update
 brew upgrade
 brew install coreutils
@@ -32,7 +31,7 @@ brew install wget
 brew install curl
 brew install go
 brew install node
-brew install python
+brew install python python3
 brew install ruby
 brew install git
 brew install mercurial
@@ -48,7 +47,8 @@ brew install pipenv
 
 # Install Apps
 echo "> Installing Apps you will like..."
-pip install git-up # https://github.com/msiemens/PyGitUp
+pip2 install git-up # https://github.com/msiemens/PyGitUp
+brew cask install datagrip
 brew cask install iterm2
 brew cask install google-chrome
 brew cask install atom
@@ -57,6 +57,7 @@ brew cask install shiftit
 brew cask install licecap
 brew cask install spotify
 brew cask install docker
+brew cask install slack
 
 # Atom packages
 echo "> Setting up Atom..."

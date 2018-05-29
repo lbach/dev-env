@@ -1,5 +1,5 @@
 #!/bin/sh
-
+exit 0
 # Enable repeat on keydown
 defaults write -g ApplePressAndHoldEnabled -bool false
 
@@ -42,4 +42,6 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 chflags nohidden ~/Library
 
 # No desktop, I just put garbage there...
-# defaults write com.apple.finder CreateDesktop -bool FALSE;killall Finder
+defaults write com.apple.finder CreateDesktop false
+
+killall Finder
