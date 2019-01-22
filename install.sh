@@ -29,8 +29,8 @@ brew install make
 brew install gnu-sed
 brew install wget
 brew install curl
-brew install go
-brew install node
+#brew install go
+#brew install node
 brew install python python3
 brew install ruby
 brew install git
@@ -47,39 +47,22 @@ brew install pipenv
 
 # Install Apps
 echo "> Installing Apps you will like..."
-pip2 install git-up # https://github.com/msiemens/PyGitUp
-brew cask install datagrip
+pip3 install git-up # https://github.com/msiemens/PyGitUp
+#brew cask install datagrip
 brew cask install iterm2
 brew cask install google-chrome
-brew cask install atom
-brew cask install pycharm
-brew cask install shiftit
-brew cask install licecap
-brew cask install spotify
-brew cask install docker
-brew cask install slack
-
-# Atom packages
-echo "> Setting up Atom..."
-apm install `cat atom-packages.list`
-cp .atom/config.cson ~/.atom/
+brew cask install visual-studio-code
+#brew cask install pycharm
+#brew cask install shiftit
+#brew cask install licecap
+#brew cask install spotify
+#brew cask install docker
+#brew cask install slack
 
 echo "> Setting up fish..."
 mkdir -p ~/.config/fish/functions
 cp -r home/dotconfig/fish  ~/.config/fish/
 grep -q fish /etc/shells && sudo sh -c "echo '/usr/local/bin/fish' >> /etc/shells"
-
-# Sublime
-#echo "> Setting up Sublime"
-#mkdir -p ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
-#cp Sublime/User/* ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
-
-# ipython
-#echo "> Setting up Sublime"
-#mkdir -p ~/.ipython/profile_default/
-#ln -s $(pwd)/configurations/.ipython/profile_default/ipython_config.py \
-#    ~/.ipython/profile_default/ipython_config.py
-
 
 echo "> Done!"
 
