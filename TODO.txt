@@ -1,0 +1,6 @@
+ [X] Move current fish config to repo
+ [ ] Re-assess install.sh
+ [ ] Re-assess OSXsettings.sh
+ [ ] Handle asdf
+ [ ] Handle ipython defaults
+ [ ] Finish makefiles in home-copy/ and home-templates

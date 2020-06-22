@@ -34,20 +34,15 @@ brew install curl
 brew install python python3
 brew install ruby
 brew install git
-brew install mercurial
 brew install tree
 brew install pstree
 #brew install the_silver_searcher
 brew install jq
 brew install mg
-brew install pipenv
 
-# Install python packages
-#pip install requests virtualenv pep8 pylint flake8
 
 # Install Apps
 echo "> Installing Apps you will like..."
-pip3 install git-up # https://github.com/msiemens/PyGitUp
 #brew cask install datagrip
 brew cask install iterm2
 brew cask install google-chrome
@@ -59,12 +54,21 @@ brew cask install visual-studio-code
 #brew cask install docker
 #brew cask install slack
 
+
+
+
+
 echo "> Setting up fish..."
 mkdir -p ~/.config/fish/functions
 cp -r home/dotconfig/fish  ~/.config/fish/
 grep -q fish /etc/shells && sudo sh -c "echo '/usr/local/bin/fish' >> /etc/shells"
 
 echo "> Done!"
+
+
+# ASFD: + python, elixir
+# Add/update fish completions to ASFD
+
 
 echo "-----------------------------------------"
 echo "Manual steps:"
