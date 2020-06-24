@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+
+args=""
+while true; do
+  case "$1" in
+    "")
+        break
+        ;;
+    "-f")
+        args="-f $ARGS"
+        shift
+        ;;
+    *)
+        pod_name="$1"
+        shift
+        ;;
+  esac
+done
+
+kubectl logs $args $pod_name | pretty_format_json

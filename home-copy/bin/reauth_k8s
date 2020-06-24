@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+set -ex
+
+case "$1" in
+"prod")
+    az aks get-credentials --resource-group rgpazewpmlitdp-aksk8s001 --subscription "Maersk Line Self-Managed Digital Cloud 01 ARM" --name digital-platform-core-prod-west --overwrite-existing
+    ;;
+"dev")
+    az aks get-credentials --resource-group rgpazewdmlitdp-aksk8s001 --subscription "Maersk Line Self-Managed Digital Cloud 01 NP ARM" --name digital-platform-core-dev-west-2 --overwrite-existing
+    ;;
+"batch-prod")
+    az aks get-credentials --resource-group rgpazewpmlitdp-aksk8s001 --subscription "Maersk Line Self-Managed Digital Cloud 01 ARM" --name digital-platform-batch-prod-west --overwrite-existing
+    ;;
+"batch-dev")
+    az aks get-credentials --resource-group rgpazewdmlitdp-aksk8s001 --subscription "Maersk Line Self-Managed Digital Cloud 01 NP ARM" --name digital-platform-batch-dev-west --overwrite-existing
+    ;;
+esac

@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -ex
+
+kube_config_file=~/.kube/config
+
+gsed -e '/\s\{1,\}access-token:\s/d' \
+     -e '/\s\{1,\}expires-in:\s/d' \
+     -e '/\s\{1,\}expires-on:\s/d' \
+     -e '/\s\{1,\}refresh-token:\s/d' \
+     -i.pre-remove-user-credentials \
+     "$kube_config_file"
