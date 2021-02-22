@@ -31,12 +31,11 @@ brew install wget
 brew install curl
 #brew install go
 #brew install node
-brew install python python3
-brew install ruby
+brew install python3
 brew install git
 brew install tree
 brew install pstree
-#brew install the_silver_searcher
+brew install parallel
 brew install jq
 brew install mg
 
@@ -45,7 +44,7 @@ brew install mg
 echo "> Installing Apps you will like..."
 #brew cask install datagrip
 brew cask install iterm2
-brew cask install google-chrome
+#brew cask install google-chrome
 brew cask install visual-studio-code
 #brew cask install pycharm
 #brew cask install shiftit
