@@ -1,0 +1,5 @@
+#!/usr/bin/env fish
+
+for ns in (kubens | grep -E '^avocado')
+    echo $ns; kubectl get pods --namespace $ns | awk '$3 !~ /Complete/ {print $0}'
+end

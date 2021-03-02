@@ -11,18 +11,23 @@ echo './OSXsettings.sh'
 
 # Install common sanity
 echo "> Installing common sanity..."
-#brew install python@3.7 python@3.8
+brew install python@3.7 python@3.8
 brew install fish
 brew install asdf coreutils make gnu-sed wget curl git tree pstree jq mg
 brew install --cask iterm2 google-chrome visual-studio-code docker
 
-exit 
+
 echo "> Setting up fish..."
 mkdir -p ~/.config/fish/functions
 cp -r home/dotconfig/fish  ~/.config/fish/
 grep -q fish /etc/shells && sudo sh -c "echo '/usr/local/bin/fish' >> /etc/shells"
 
 echo "> Done!"
+
+
+# ASFD: + python, elixir
+# Add/update fish completions to ASFD
+
 
 echo "-----------------------------------------"
 echo "Manual steps:"
