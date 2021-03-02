@@ -6,59 +6,17 @@
 # - https://github.com/mads-hartmann/dotfiles
 
 # Set up OSX settings
-echo "> Setting up OS X..."
-./OSXsettings.sh
-
-# Install homebrew and cask
-if test ! $(which brew)
-then
-  echo "> Installing brew..."
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  brew doctor
-fi
-
-brew install fish
+echo "Consider setting up OSX:"
+echo './OSXsettings.sh'
 
 # Install common sanity
 echo "> Installing common sanity..."
-brew tap caskroom/cask
-brew update
-brew upgrade
-brew install coreutils
-brew install make
-brew install gnu-sed
-brew install wget
-brew install curl
-#brew install go
-#brew install node
-brew install python python3
-brew install ruby
-brew install git
-brew install mercurial
-brew install tree
-brew install pstree
-#brew install the_silver_searcher
-brew install jq
-brew install mg
-brew install pipenv
+#brew install python@3.7 python@3.8
+brew install fish
+brew install asdf coreutils make gnu-sed wget curl git tree pstree jq mg
+brew install --cask iterm2 google-chrome visual-studio-code docker
 
-# Install python packages
-#pip install requests virtualenv pep8 pylint flake8
-
-# Install Apps
-echo "> Installing Apps you will like..."
-pip3 install git-up # https://github.com/msiemens/PyGitUp
-#brew cask install datagrip
-brew cask install iterm2
-brew cask install google-chrome
-brew cask install visual-studio-code
-#brew cask install pycharm
-#brew cask install shiftit
-#brew cask install licecap
-#brew cask install spotify
-#brew cask install docker
-#brew cask install slack
-
+exit 
 echo "> Setting up fish..."
 mkdir -p ~/.config/fish/functions
 cp -r home/dotconfig/fish  ~/.config/fish/

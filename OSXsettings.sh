@@ -1,5 +1,5 @@
 #!/bin/sh
-exit 0
+set -ex
 # Enable repeat on keydown
 defaults write -g ApplePressAndHoldEnabled -bool false
 
@@ -13,13 +13,13 @@ defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder ShowStatusBar -bool true
 
 # Show indicator lights for open applications in the Dock
-defaults write com.apple.dock show-process-indicators -bool true
+#defaults write com.apple.dock show-process-indicators -bool true
 
 # Hide the Dock
-defaults write com.apple.Dock autohide -bool TRUE;
+#defaults write com.apple.Dock autohide -bool TRUE;
 
 # Remove all shortcuts in the Dock
-defaults write com.apple.dock persistent-apps -array
+#defaults write com.apple.dock persistent-apps -array
 
 killall Dock
 
@@ -42,6 +42,6 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 chflags nohidden ~/Library
 
 # No desktop, I just put garbage there...
-defaults write com.apple.finder CreateDesktop false
+#defaults write com.apple.finder CreateDesktop false
 
 killall Finder
