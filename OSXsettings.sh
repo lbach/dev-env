@@ -38,6 +38,9 @@ defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 # Add a context menu item for showing the Web Inspector in web views
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
+# No sound when connecting charger
+defaults write com.apple.PowerChime ChimeOnNoHardware -bool true && killall PowerChime
+
 # Show the ~/Library folder
 chflags nohidden ~/Library
 
