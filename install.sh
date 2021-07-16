@@ -22,6 +22,15 @@ mkdir -p ~/.config/fish/functions
 cp -r home/dotconfig/fish  ~/.config/fish/
 grep -q fish /etc/shells && sudo sh -c "echo '/usr/local/bin/fish' >> /etc/shells"
 
+echo "> Setting up git..."
+git config --global user.name "Lasse Bach"
+echo "Enter git email: "
+read git_email
+git config --global user.email "$git_email"
+echo '.DS_Store' >> ~/.gitignore && git config --global core.excludesfile ~/.gitignore
+git config --global pull.rebase true
+
+
 echo "> Done!"
 
 bash mg-setup.sh
