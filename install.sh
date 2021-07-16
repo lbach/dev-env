@@ -24,7 +24,7 @@ grep -q fish /etc/shells && sudo sh -c "echo '/usr/local/bin/fish' >> /etc/shell
 
 echo "> Done!"
 
-
+bash mg-setup.sh
 # ASFD: + python, elixir
 # Add/update fish completions to ASFD
 
